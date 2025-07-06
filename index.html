@@ -1,0 +1,354 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+        .bi-search{
+            font-weight: 200;
+        }
+       
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;     
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             
+}
+
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <div class="mx-auto max-w-[1300px]">
+        <header class=" ">
+            <div class="header flex justify-between h-fit w-full p-4">
+                <div class="logo-content flex items-center gap-2 w-[300px]">
+                    <h4 class="name-web font-bold font-mono">EgyptTour </h4>
+                    
+                    <div class="search-content flex items-center gap-2  ">
+                        <i class="bi bi-search px-1"></i>
+                        <input class=" outline-none bg-transparent " type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="nav-content hidden lg:block">
+                   <ul class="flex gap-3 items-center font-semibold ">
+                        <li><a href="#" class="text-gray-700 hover:bg-orange p-2 rounded-lg hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-700 hover:bg-orange p-2 rounded-lg hover:text-white">Guide</a></li>
+                        <li><a href="#" class="text-gray-700 hover:bg-orange p-2 rounded-lg hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-700 hover:bg-orange p-2 rounded-lg hover:text-white">Inspiration</a></li>
+                        <li><a href="#" class="text-gray-700 hover:bg-orange p-2 rounded-lg hover:text-white">Contact</a></li>
+                        <li class="w-[80px] "><a href="#" class=" font-semibold bg-orange p-2 rounded-lg text-white  ">Sign up</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- list-nav -->
+
+                <div class="list-nav block lg:hidden">
+                   
+                    <i class="bi bi-list text-2xl"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel" class="font-bold">EgyptTour</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body flex justify-center ">
+                            <ul class="  text-2xl flex flex-col gap-3">
+                                <li class="hover:text-orange-600"><a href="#">Home</a></li>
+                                <li class="hover:text-orange-600"><a href="#">Guide</a></li>
+                                <li class="hover:text-orange-600"><a href="#">About</a></li>
+                                <li class="hover:text-orange-600"><a href="#">Inspiration</a></li>
+                                <li class="hover:text-orange-600"><a href="#">Contact</a></li>
+                                <li class="hover:text-orange-600"><a href="#">Sign up</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <div class="container mian-content mt-3 h-full">
+                <figure class="rounded-2xl md:relative">
+                        <img class="w-full object-cover rounded-xl" src="https://www.gokitetours.com/wp-content/uploads/2019/10/egypt-tour-packages-from-india.webp" alt="">
+
+                        <figcaption
+                            class=" md:divide-x divide-gray-300 bg-white p-4 rounded-xl shadow-lg text-sm text-gray-700 absolute z-20 md:-bottom-10 mt-5 left-1/2 transform -translate-x-1/2 md:w-[90%]  md:flex md:flex-wrap md:justify-around flex-wrap px-3 w-[80%]  ">
+
+                            <!-- Gender -->
+                            <div class="flex items-center gap-3 justify-between px-4 py-2 hover:bg-orange-100 cursor-pointer transition flex-grow">
+                            <div>
+                                <span class="block text-xs text-gray-500">Gender</span>
+                                <p class="font-medium">Male</p>
+                            </div>
+                            <i class="bi bi-chevron-down text-gray-500"></i>
+                            </div>
+
+                            <!-- Age -->
+                            <div class="flex items-center gap-3 justify-between px-4 py-2 hover:bg-orange-100 cursor-pointer transition flex-grow">
+                            <div class="">
+                                <span class="block text-xs text-gray-500">Age</span>
+                                <p class="font-medium">24+</p>
+                            </div>
+                            <i class="bi bi-chevron-down text-gray-500"></i>
+                            </div>
+
+                            <!-- Language -->
+                            <div class="flex items-center gap-3 justify-between px-4 py-2 hover:bg-orange-100 cursor-pointer transition flex-grow">
+                            <div class="">
+                                <span class="block text-xs text-gray-500">Language</span>
+                                <p class="font-medium">English, Arabic</p>
+                            </div>
+                            <i class="bi bi-chevron-down text-gray-500"></i>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-3 justify-between px-4 py-2 hover:bg-orange-100 cursor-pointer transition flex-grow ">
+                            <div class="">
+                                <span class="block text-xs text-gray-500">Location</span>
+                                <p class="font-medium">Cairo</p>
+                            </div>
+                            <i class="bi bi-chevron-down text-gray-500"></i>
+                            </div>
+
+                            <!-- search -->
+                            <div class="search-btn flex justify-center items-center  flex-grow">
+                                <button class="p-2 bg-orange rounded-md text-white">Search</button>
+                            </div>
+
+                        </figcaption>
+                </figure>
+
+            </div>
+
+            <div class=" container client">
+                <div class="client-list">
+                    <div class="title-client flex justify-between">
+                        <h1 class="font-bold text-3xl">Guides for you!</h1>
+                        <button class="p-2 bg-orange rounded-lg text-white text-sm">See All Guides</button>
+                    </div>
+                    <div class="all-client flex gap-4 overflow-x-scroll overflow-auto scrollbar-hide">
+                        <!-- profile -->
+                     <div id="client-box" class="flex gap-4">
+                      <!-- client here         -->
+
+                     </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="container information mt-5 mb-5">
+                <div >
+                    <div class="title flex justify-center text-3xl font-bold">
+                        <h1>How does it work?</h1>
+                    </div>
+                    <div id="information" class="content mt-5 gap-5  mx-auto  flex flex-wrap justify-center">
+                       
+                    </div>
+                </div>
+            </div>
+
+             <div class="container mian-content mt-3 h-full">
+                <figure class="rounded-2xl md:relative">
+                        <img class="w-full object-cover rounded-xl" src="https://egypttourz.com/wp-content/uploads/2020/03/egypt-afternon.jpg" alt="">
+
+                        <figcaption
+                            class=" md:divide-x divide-gray-300 bg-white p-4 rounded-xl shadow-lg text-sm text-gray-700 absolute z-20 md:-bottom-10 mt-5 left-1/2 transform -translate-x-1/2 md:w-[90%]  flex md:justify-between  px-11 w-[80%]   flex-wrap justify-center">
+
+                          
+                            <div class="flex flex-col flex-grow font-bold text-2xl">
+                                <p>Be reference on our site,</p>
+                                <span class="text-orange-500">it's 100% free!</span>
+                            </div>
+
+
+                            <!-- search -->
+                            <div class="search-btn flex justify-center items-center  py-2">
+                                <button class="p-3 bg-orange rounded-md text-white font-bold">I am Turist Guides</button>
+                            </div>
+
+                        </figcaption>
+                </figure>
+
+            </div>
+
+            <!-- learn more -->
+              <div class="container learn-more mt-5 mb-5">
+                <div >
+                    <div class="title flex justify-center text-3xl font-bold">
+                        <h1>Learn more About Egypt</h1>
+                    </div>
+                    <div  class="content-learn-more mt-5 lg:grid-cols-3  gap-4 grid sm:grid-cols-2">
+                            <div class="box shadow-2xl rounded-lg p-3 ">
+                                <figure class="w-full rounded-md overflow-hidden ">
+                                    <img src="https://i0.wp.com/thehoteljournal.com/wp-content/uploads/2022/12/best-luxury-hotels-Egypt-Oberoir-Beach-Resort-Sahl-Hasheesh.jpg?resize=798%2C638&ssl=1" alt="">
+                                </figure>
+                                <figcaption class="my-2">
+                                    <div class="content-capion font-bold ">
+                                        <a class="bg-slate-orage text-orange-600" href="">Hotel</a>
+                                        <p>Where to sleep in Luxor? <i class="bi bi-box-arrow-in-up-right text-orange-600"></i></p>
+                                    </div>
+                                </figcaption>
+                            </div>
+                            <div class="box shadow-2xl rounded-lg p-3  ">
+                                <figure class="w-full rounded-md overflow-hidden ">
+                                    <img src="https://i0.wp.com/thehoteljournal.com/wp-content/uploads/2022/12/best-luxury-hotels-Egypt-Oberoir-Beach-Resort-Sahl-Hasheesh.jpg?resize=798%2C638&ssl=1" alt="">
+                                </figure>
+                                <figcaption class="my-2">
+                                    <div class="content-capion font-bold">
+                                        <a class="bg-slate-orage text-orange-600" href="">Hotel</a>
+                                        <p>Where to sleep in Luxor? <i class="bi bi-box-arrow-in-up-right text-orange-600"></i></p>
+                                    </div>
+                                </figcaption>
+                            </div>
+                            <div class="box shadow-2xl rounded-lg p-3  ">
+                                <figure class="w-full rounded-md overflow-hidden ">
+                                    <img src="https://i0.wp.com/thehoteljournal.com/wp-content/uploads/2022/12/best-luxury-hotels-Egypt-Oberoir-Beach-Resort-Sahl-Hasheesh.jpg?resize=798%2C638&ssl=1" alt="">
+                                </figure>
+                                <figcaption class="my-2">
+                                    <div class="content-capion font-bold">
+                                        <a class="bg-slate-orage text-orange-600" href="">Hotel</a>
+                                        <p>Where to sleep in Luxor? <i class="bi bi-box-arrow-in-up-right text-orange-600"></i></p>
+                                    </div>
+                                </figcaption>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+       
+
+    </div>
+     <footer>
+            <div class="footer w-full h-[300px] bg-black">
+
+            </div>
+        </footer>
+</body>
+ <script>
+    const client = document.getElementById('client-box');
+    const info = document.getElementById('information')
+
+    const infoList  =  [
+
+        {
+            'img-info-bg':'https://cdn.dribbble.com/userupload/31380338/file/original-91e8589afc214dccb8896c1da9855e6d.gif',
+            'img-animetor':'https://www.pngkey.com/png/full/947-9472871_tourism-euclidean-vector-clip-art-tourist-clipart-png.png',
+            'name-info': "Select a Guide"
+        },
+        {
+            'img-info-bg':'https://cdn.dribbble.com/userupload/42287004/file/original-524b8d54743209d62c513ee680bbcf27.gif',
+            'img-animetor':'https://png.pngtree.com/png-clipart/20210516/original/pngtree-travel-cartoon-comfortable-png-image_6295804.png',
+            'name-info': "Select a Guide"
+        },
+         {
+            'img-info-bg':'https://cdn.dribbble.com/userupload/23597647/file/original-a9a09b8acdaab7ab4ada18065aa34d0a.gif',
+            'img-animetor':'https://png.pngtree.com/png-clipart/20240923/original/pngtree-cartoon-man-tourist-illustration-png-image_16068516.png',
+            'name-info': "Select a Guide"
+        },
+    ]
+
+    const ClientList = [
+    {
+        'img': 'https://i.pinimg.com/736x/22/be/93/22be93284555193a9fad94c2d3318c22.jpg',
+        'name': 'Abayami Mallik',
+        'review': "1000+"
+    },
+     {
+        'img': 'https://i.pinimg.com/736x/6e/81/fa/6e81faca558fb6864d881c5e05c51a02.jpg',
+        'name': 'Berenike Eman',
+        'review': "900+"
+    },
+     {
+        'img': 'https://img.freepik.com/premium-photo/beautiful-woman-brilliant-burqa-mask-dubai-desert-sunset-timearabian-style_159260-1137.jpg',
+        'name': 'Dendera Heba',
+        'review': "1000+"
+    },
+     {
+        'img': 'https://i.pinimg.com/564x/68/fb/61/68fb61f1063698b5931acd6eeb78c7b6.jpg',
+        'name': 'Abayami Mallik',
+        'review': "1000+"
+    },
+     {
+        'img': 'https://i.pinimg.com/736x/22/be/93/22be93284555193a9fad94c2d3318c22.jpg',
+        'name': 'Abayami Mallik',
+        'review': "1000+"
+    },
+     {
+        'img': 'https://i.pinimg.com/736x/6e/81/fa/6e81faca558fb6864d881c5e05c51a02.jpg',
+        'name': 'Berenike Eman',
+        'review': "900+"
+    },
+     {
+        'img': 'https://img.freepik.com/premium-photo/beautiful-woman-brilliant-burqa-mask-dubai-desert-sunset-timearabian-style_159260-1137.jpg',
+        'name': 'Dendera Heba',
+        'review': "1000+"
+    },
+     {
+        'img': 'https://i.pinimg.com/564x/68/fb/61/68fb61f1063698b5931acd6eeb78c7b6.jpg',
+        'name': 'Abayami Mallik',
+        'review': "1000+"
+    },
+
+];
+ClientList.forEach((listClient)=>{
+    client.innerHTML += `
+    <div  class="client-box mt-5 hover:bg-orange hover:text-white shadow-lg mb-5 w-fit px-4 py-3 rounded-xl ">
+                            <figure class="w-[120px] h-[120px] rounded-full overflow-hidden">
+                                <img src="${listClient['img']}" alt="">
+                            </figure>
+                            <figcaption class="flex my-1 justify-center ">
+                                <div class="wrap-caption">
+                                      <div class="name font-bold  my-2 ">
+                                            ${listClient["name"]}
+                                        </div>
+                                        <div class="stars my-2 text-sm text-orange-500 ">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <div class="review flex gap-3 items-center ">
+                                            <div class="counts">${listClient.review} review</div>
+                                        </div>
+                                </div>
+                            </figcaption>
+                         </div>`
+     
+
+});
+infoList.forEach((ListInfo)=>{
+    info.innerHTML  += `
+     <div class="box-content  p-3 rounded-2xl   bg-slate-orage w-fit  flex !justify-center ">
+                            <div class="wrap-box w-fit">
+                                        <figure class=" rounded-full  relative">
+                                        <img class="rounded-full h-[100px] w-[100px]" src="${ListInfo["img-info-bg"]}" alt="">
+                                        <img class="absolute h-[120px] w-[120px] top-0 " src="${ListInfo["img-animetor"]}" alt="">
+                                        </figure>
+                                        <figcaption class="py-4 font-bold  text-slate-800">
+                                            <p>Select a Guide</p>
+                                        </figcaption>
+                            </div>
+                        </div>
+    `
+})
+
+
+
+
+
+</script> 
+</html>
