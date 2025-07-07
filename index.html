@@ -26,17 +26,6 @@
   gap: 1rem;
 }
 
-@media (min-width: 640px) {
-  .content-learn-more > .box:nth-child(3) {
-    grid-column: span 2;
-  }
-}
-
-@media (min-width: 760px) {
-  .content-learn-more > .box:nth-child(3) {
-    grid-column: span 1;
-  }
-}
 
 
 
@@ -71,8 +60,11 @@
                 </div>
 
                 <!-- list-nav -->
+                 <button id="darkmode" class="darkmode bg-gray-400 p-2 rounded-full flex items-center justify-center">
+                    <i class="bi bi-sun"></i>
+                 </button>
 
-                <div class="list-nav block lg:hidden">
+                <div class="list-nav block lg:hidden ">
                    
                     <i class="bi bi-list text-2xl"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -100,7 +92,7 @@
                 <figure class="rounded-2xl md:relative">
                         <img class="w-full object-cover rounded-xl" src="https://www.gokitetours.com/wp-content/uploads/2019/10/egypt-tour-packages-from-india.webp" alt="">
 
-                        <figcaption
+                        <figcaption id="box_dark"
                             class=" md:divide-x divide-gray-300 bg-white p-4 rounded-xl shadow-lg text-sm text-gray-700 absolute z-20 md:-bottom-10 mt-5 left-1/2 transform -translate-x-1/2 md:w-[90%]  md:flex md:flex-wrap md:justify-around flex-wrap px-3 w-[80%]  ">
 
                             <!-- Gender -->
@@ -181,7 +173,7 @@
                 <figure class="rounded-2xl md:relative">
                         <img class="w-full object-cover rounded-xl" src="https://egypttourz.com/wp-content/uploads/2020/03/egypt-afternon.jpg" alt="">
 
-                        <figcaption
+                        <figcaption  id="box_dark"
                             class=" md:divide-x divide-gray-300 bg-white p-4 rounded-xl shadow-lg text-sm text-gray-700 absolute z-20 md:-bottom-10 mt-5 left-1/2 transform -translate-x-1/2 md:w-[90%]  flex md:justify-between  px-11 w-[80%]   flex-wrap justify-center">
 
                           
@@ -202,12 +194,12 @@
             </div>
 
             <!-- learn more -->
-              <div class="container learn-more mt-5 mb-5">
+              <div class="container learn-more lg:mt-32 mb-5">
                 <div >
                     <div class="title flex justify-center text-3xl font-bold">
                         <h1>Learn more About Egypt</h1>
                     </div>
-                    <div id="learn_more" class="content-learn-more mt-5 grid grid-cols-1 sm:grid-cols-2 md:!grid-cols-3 gap-3">
+                    <div id="learn_more" class="content-learn-more mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
                       
                             <!-- <div class="box3 shadow-2xl rounded-lg p-3 h-fit sm:col-span-2 md:col-span-1">
                                 <figure class="w-full rounded-md overflow-hidden ">
@@ -292,149 +284,11 @@
       <a href="#" class="hover:underline">Term of Condition</a>
     </div>
   </div>
-</footer>
-
-        </footer>
+    </footer>
+  </footer>
 </body>
- <script>
-    const client = document.getElementById('client-box');
-    const info = document.getElementById('information')
-    const learn_more =  document.getElementById('learn_more')
-   
-    const learnMoreList = [
-        {
-            'img_learn_more':'https://i0.wp.com/thehoteljournal.com/wp-content/uploads/2022/12/best-luxury-hotels-Egypt-Oberoir-Beach-Resort-Sahl-Hasheesh.jpg?resize=798%2C638&ssl=1',
-            'review-learn-more': 'Where to sleep in Luxor?'
-        },
-         {
-            'img_learn_more':'https://i0.wp.com/thehoteljournal.com/wp-content/uploads/2022/12/best-luxury-hotels-Egypt-Oberoir-Beach-Resort-Sahl-Hasheesh.jpg?resize=798%2C638&ssl=1',
-            'review-learn-more': 'Where to sleep in Luxor?'
-        },
-         {
-            'img_learn_more':'https://i0.wp.com/thehoteljournal.com/wp-content/uploads/2022/12/best-luxury-hotels-Egypt-Oberoir-Beach-Resort-Sahl-Hasheesh.jpg?resize=798%2C638&ssl=1',
-            'review-learn-more': 'Where to sleep in Luxor?'
-        },
-
-    ]
-    const infoList  =  [
-
-        {
-            'img-info-bg':'https://cdn.dribbble.com/userupload/31380338/file/original-91e8589afc214dccb8896c1da9855e6d.gif',
-            'img-animetor':'https://www.pngkey.com/png/full/947-9472871_tourism-euclidean-vector-clip-art-tourist-clipart-png.png',
-            'name-info': "Select a Guide"
-        },
-        {
-            'img-info-bg':'https://cdn.dribbble.com/userupload/42287004/file/original-524b8d54743209d62c513ee680bbcf27.gif',
-            'img-animetor':'https://png.pngtree.com/png-clipart/20210516/original/pngtree-travel-cartoon-comfortable-png-image_6295804.png',
-            'name-info': "Select a Guide"
-        },
-         {
-            'img-info-bg':'https://cdn.dribbble.com/userupload/23597647/file/original-a9a09b8acdaab7ab4ada18065aa34d0a.gif',
-            'img-animetor':'https://png.pngtree.com/png-clipart/20240923/original/pngtree-cartoon-man-tourist-illustration-png-image_16068516.png',
-            'name-info': "Select a Guide"
-        },
-    ]
-    const ClientList = [
-    {
-        'img': 'https://i.pinimg.com/736x/22/be/93/22be93284555193a9fad94c2d3318c22.jpg',
-        'name': 'Abayami Mallik',
-        'review': "1000+"
-    },
-     {
-        'img': 'https://i.pinimg.com/736x/6e/81/fa/6e81faca558fb6864d881c5e05c51a02.jpg',
-        'name': 'Berenike Eman',
-        'review': "900+"
-    },
-     {
-        'img': 'https://img.freepik.com/premium-photo/beautiful-woman-brilliant-burqa-mask-dubai-desert-sunset-timearabian-style_159260-1137.jpg',
-        'name': 'Dendera Heba',
-        'review': "1000+"
-    },
-     {
-        'img': 'https://i.pinimg.com/564x/68/fb/61/68fb61f1063698b5931acd6eeb78c7b6.jpg',
-        'name': 'Abayami Mallik',
-        'review': "1000+"
-    },
-     {
-        'img': 'https://i.pinimg.com/736x/22/be/93/22be93284555193a9fad94c2d3318c22.jpg',
-        'name': 'Abayami Mallik',
-        'review': "1000+"
-    },
-     {
-        'img': 'https://i.pinimg.com/736x/6e/81/fa/6e81faca558fb6864d881c5e05c51a02.jpg',
-        'name': 'Berenike Eman',
-        'review': "900+"
-    },
-     {
-        'img': 'https://img.freepik.com/premium-photo/beautiful-woman-brilliant-burqa-mask-dubai-desert-sunset-timearabian-style_159260-1137.jpg',
-        'name': 'Dendera Heba',
-        'review': "1000+"
-    },
-     {
-        'img': 'https://i.pinimg.com/564x/68/fb/61/68fb61f1063698b5931acd6eeb78c7b6.jpg',
-        'name': 'Abayami Mallik',
-        'review': "1000+"
-    },
-
-];
-ClientList.forEach((listClient)=>{
-    client.innerHTML += `
-    <div  class="client-box mt-5 hover:bg-orange hover:text-white shadow-lg mb-5 w-fit px-4 py-3 rounded-xl ">
-                            <figure class="w-[120px] h-[120px] rounded-full overflow-hidden">
-                                <img src="${listClient['img']}" alt="">
-                            </figure>
-                            <figcaption class="flex my-1 justify-center ">
-                                <div class="wrap-caption">
-                                      <div class="name font-bold  my-2 ">
-                                            ${listClient["name"]}
-                                        </div>
-                                        <div class="stars my-2 text-sm text-orange-500 ">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
-                                        </div>
-                                        <div class="review flex gap-3 items-center ">
-                                            <div class="counts">${listClient.review} review</div>
-                                        </div>
-                                </div>
-                            </figcaption>
-                         </div>`
-     
-
-});
-infoList.forEach((ListInfo)=>{
-    info.innerHTML  += `
-     <div class="box-content  p-3 rounded-2xl   bg-slate-orage w-fit  flex !justify-center ">
-                            <div class="wrap-box w-fit">
-                                        <figure class=" rounded-full  relative">
-                                        <img class="rounded-full h-[100px] w-[100px]" src="${ListInfo["img-info-bg"]}" alt="">
-                                        <img class="absolute h-[120px] w-[120px] top-0 " src="${ListInfo["img-animetor"]}" alt="">
-                                        </figure>
-                                        <figcaption class="py-4 font-bold  text-slate-800">
-                                            <p>Select a Guide</p>
-                                        </figcaption>
-                            </div>
-                        </div>
-    `
-})
-learnMoreList.forEach((listlearn)=>{
-    learn_more.innerHTML += `
-    <div class="box shadow-2xl rounded-lg p-3 h-fit  ">
-                                <figure class="w-full rounded-md overflow-hidden ">
-                                    <img src="${listlearn["img_learn_more"]}" alt="">
-                                </figure>
-                                <figcaption class="my-2">
-                                    <div class="content-capion font-bold ">
-                                        <a class="bg-slate-orage text-orange-600" href="">Hotel</a>
-                                        <p>${listlearn["review-learn-more"]}<i class="bi bi-box-arrow-in-up-right text-orange-600"></i></p>
-                                    </div>
-                                </figcaption>
-                            </div>
-    `
-})
-
+ <script src="script.js">
+  
 
 </script> 
 </html>
